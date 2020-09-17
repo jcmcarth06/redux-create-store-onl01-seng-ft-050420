@@ -12,12 +12,15 @@ function reducer(state = { count: 0 }, action) {
 
 function createStore() {
   let state;
-};
 
-function dispatch(action){
-  state = reducer(state, action);
-  render();
-};
+
+  function dispatch(action){
+    state = reducer(state, action);
+    render();
+  };
+
+  return { dispatch };
+];
 
 function render() {
   let container = document.getElementById('container');
