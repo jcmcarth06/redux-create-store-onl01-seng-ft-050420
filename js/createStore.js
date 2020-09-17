@@ -10,6 +10,10 @@ function reducer(state = { count: 0 }, action) {
   }
 };
 
+function createStore() {
+  let state;
+}
+
 function dispatch(action){
   state = reducer(state, action);
   render();
